@@ -8,7 +8,6 @@
 #include <ESP8266WiFi.h> // biblioteca responsável pelo funcionamento do módulo ESP8266
 #include <MQTT.h> // biblioteca responsável pelas conexões MQTT
 #include <uMQTTBroker.h> // biblioteca responsável pela criação do broker local no módulo ESP8266
-#include <math.h> // biblioteca matemática
 #include <HX711.h> // biblioteca responsável pelo modulo HX711
 
 #define LOADCELL_DOUT_PIN D7 //pinos que receberam os dados do modulo HX711
