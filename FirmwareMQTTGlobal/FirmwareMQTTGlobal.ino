@@ -32,7 +32,7 @@ bool connectMQTT(); // Definição da função de conexão ao mensageiro
 WiFiClient balancaClient; //Definição da variável do tipo cliente da rede sem fio
 PubSubClient client(balancaClient); //Definição da variável do tipo cliente do método publish-subscribe, que necessita de um cliente de rede sem fio
 
-void setup_wifi() { // Esta função realiza a conexão à rede wifi cujos dados foram informados nas variaveis
+void conectarWifi() { // Esta função realiza a conexão à rede wifi cujos dados foram informados nas variaveis
   WiFi.begin(ssid, password);
   while (WiFi.status() != WL_CONNECTED) {
     delay(500);
@@ -72,7 +72,7 @@ void setup() {
   // Configurando o ESP8266 para o modo de acesso
   Serial.print("Configurando o modo de acesso.....");  
 
-  setup_wifi(); // Chama a função de conexão à rede sem fio
+  conectarWifi(); // Chama a função de conexão à rede sem fio
 
   mqttStatus =  connectMQTT(); // Obtém um resultado positivo ou negativo da conexão ao mensageiro, corpo da função se encontra mais abaixo
 }
